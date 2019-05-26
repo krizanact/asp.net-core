@@ -1,0 +1,20 @@
+﻿@model WebApplication.Models.Input
+
+
+<h3><b>Forms: Strongly Typed</b></h3>
+
+@using (Html.BeginForm("Values", "Values", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Enter ID: </td>
+            
+            <td>@Html.TextBoxFor(m => m.inputId, new {  @type = "number" , @required = "required"})</td>
+
+        </tr>
+       
+        <tr>
+            <td colspan="2"><input type="submit" value="Submit Form" /></td>
+        </tr>
+    </table>
+}
